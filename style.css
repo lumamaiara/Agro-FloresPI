@@ -141,8 +141,8 @@ body {
 }
 
 .service-card {
-    width: 290px;
-    height: 524px;
+    width: 260px;
+    height: 504px;
     border-radius: 35px;
     position: relative;
     overflow: hidden;
@@ -206,26 +206,26 @@ body {
 
 .icon-grid {
     display: grid;
-    grid-template-columns: repeat(4, 200px);
-    gap: 100px 120px;
+    grid-template-columns: repeat(4, 190px);
+    gap: 90px 80px;
     justify-content: center;
 }
 
 .icon-circle {
-    width: 200px;
-    height: 200px;
+    width: 210px;
+    height: 210px;
     background: #D9D9D9;
     border-radius: 50%;
 }
 .icon-circle img {
-    width: 190px; /* Define a largura da imagem do ícone */
+    width: 145px; /* Define a largura da imagem do ícone */
     height: 190px; /* Define a altura da imagem do ícone */
     object-fit: contain; /* Garante que a imagem caiba sem distorcer */
 }
 @media (max-width: 768px) {
     .icon-circle img {
-        width: 70px; /* Diminui o ícone em telas menores */
-        height: 70px;
+        width: 60px; /* Diminui o ícone em telas menores */
+        height: 60px;
     }
 }
 
@@ -455,7 +455,7 @@ body {
 }
 
 .footer-logos img {
-    height: 40px;
+    height: 90px;
     width: auto;
     opacity: 0.7;
 }
