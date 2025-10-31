@@ -554,3 +554,49 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* PÁGINA "EM CONSTRUÇÃO" ( somos.html)*/
+
+.simple-home-bar {
+    background-color: var(--verde-escuro);
+    padding: 15px 40px;
+}
+
+.simple-home-bar a {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--bege-fundo);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease;
+}
+
+.simple-home-bar a:hover {
+    opacity: 0.8;
+}
+
+.simple-home-bar i {
+    margin-right: 8px; /* Ícone de seta */
+}
+
+.page-section-beige {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.construction-content h2 {
+    font-family: 'Antic Didone', serif;
+    font-size: 3rem;
+    color: var(--verde-escuro);
+}
+
+.construction-content p {
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 1.2rem;
+    color: var(--verde-escuro);
+}
