@@ -1,193 +1,276 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Agro & Flores</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@400&family=Antic+Didone&family=Josefin+Sans:wght@400&family=Lovers+Quarrel&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@400&family=Antic+Didone&family=Josefin+Sans:wght@400&family=Lovers+Quarrel&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="style.css">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <link rel="stylesheet" href="style.css" />
 
-</head> 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+  </head>
 
-<body>
-
+  <body>
     <header class="hero-section">
-        <nav class="nav-bar">
-            <ul class="nav-links">
-                <li><a href="#Home">HOME</a></li>
-                <li><a href="#services">SERVIÇOS</a></li>
-                <li><a href="Somos.html">QUEM SOMOS</a></li>
-                <li><a href="https://drive.google.com/drive/folders/1pEJQwez-4A8vWgDA5HABCGWgTgkocyyC?usp=sharing" target="_blank">CATÁLOGO</a></li>
-                <li><a href="#contact">FALE CONOSCO</a></li>
-            </ul>
-        </nav>
-        <div class="hero-content">
-            <h1 class="hero-title">Contando histórias Construindo memórias !</h1>
-            <p class="hero-subtitle">Agro&flores - 2025</p>
+      <nav class="nav-bar">
+        <ul class="nav-links">
+          <li><a href="#Home">HOME</a></li>
+          <li><a href="#services">SERVIÇOS</a></li>
+          <li><a href="somos.html">QUEM SOMOS</a></li>
+          <li>
+            <a
+              href="https://drive.google.com/drive/folders/1pEJQwez-4A8vWgDA5HABCGWgTgkocyyC?usp=sharing"
+              target="_blank"
+              >CATÁLOGO</a
+            >
+          </li>
+          <li><a href="#contact">FALE CONOSCO</a></li>
+        </ul>
+        <div class="hamburger-icon">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
         </div>
+      </nav>
+      <div class="hero-content">
+        <h1 class="hero-title">Contando histórias Construindo memórias !</h1>
+        <p class="hero-subtitle">Agro&flores - 2025</p>
+      </div>
     </header>
 
     <main>
-        <section id="services" class="services-section">
-            <h2 class="section-title">SERVIÇOS</h2>
-            <div class="services-container">
-                <div class="service-card">
-                    <img src="Assinatura.jpeg" alt="Serviço de Assinatura Floral">
-                    <p class="service-label">ASSINATURA</p>
-                </div>
+      <section id="services" class="services-section">
+        <h2 class="section-title">SERVIÇOS</h2>
+        <div class="services-container">
+          <div class="service-card">
+            <img src="Assinatura.jpeg" alt="Serviço de Assinatura Floral" />
+            <p class="service-label">ASSINATURA</p>
+          </div>
 
-                <div class="service-card">
-                    <img src="decoracao.jpg" alt="Serviço de Decorações">
-                    <p class="service-label">DECORAÇÕES</p>
-                </div>
+          <div class="service-card">
+            <img src="decoracao.jpg" alt="Serviço de Decorações" />
+            <p class="service-label">DECORAÇÕES</p>
+          </div>
 
-                <div class="service-card">
-                    <img src="personalizados.jpeg" alt="Serviço de Itens Personalizados">
-                    <p class="service-label">PERSONALISADOS</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="find-here" class="find-here-section">
-            <h2 class="find-here-title">O que você encontra Aqui?</h2>
-            <p class="find-here-subtitle">Conheça os itens que fazem parte da nossa loja</p>
-            <div class="icon-grid">
-                <div class="icon-circle"><img src="icones/religioso.png" alt="Ícone1"></div>
-                <div class="icon-circle"><img src="icones/bombom.png" alt="Ícone2"></div>
-                <div class="icon-circle"><img src="icones/box.png" alt="Ícone3"></div>
-                <div class="icon-circle"><img src="icones/buquê.png" alt="Ícone4"></div>
-                <div class="icon-circle"><img src="icones/cestas.png" alt="Ícone5"></div>
-                <div class="icon-circle"><img src="icones/flores.png" alt="Ícone6"></div>
-                <div class="icon-circle"><img src="icones/velas.png" alt="Ícone7"></div>
-                <div class="icon-circle"><img src="icones/plantas.png" alt="Ícone de Spa"></div>
-            </div>
-        </section>
-    </main>
-</section>
-    </main>
-
-   </section>
-    </main>
-
-    <section class="reviews-contact-section">
-        <div class="container">
-            
-            <div class="reviews-part">
-                <h2 class="section-title">O que nossos clientes dizem</h2>
-                <div class="reviews-container">
-                    
-                    <div class="review-card">
-                        <div class="review-stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="review-text">"As flores são sempre frescas e os arranjos são maravilhosos! O atendimento é impecável. Recomendo de olhos fechados!"</f>
-                        <span class="review-author">- Maria S.</span>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="review-text">"Comprei um presente personalizado e foi um sucesso. Deu para ver o carinho em cada detalhe. Virei cliente fiel!"</p>
-                        <span class="review-author">- João P.</span>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="review-text">"A assinatura floral mudou o astral da minha casa. Toda semana uma surpresa linda e cheirosa. Eu amo!"</p>
-                        <span class="review-author">- Ana L.</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="contact-part">
-                <h2 class="section-title">Faça seu orçamento</h2>
-                <p class="contact-text">
-                    Tem uma ideia para um evento, um presente especial ou quer uma assinatura floral?
-                    Clique no botão abaixo e fale diretamente conosco pelo WhatsApp!
-                </p>
-                <a href="https://wa.me/558999749763" target="_blank" class="whatsapp-button">
-                    <i class="fa-brands fa-whatsapp"></i> Chamar no WhatsApp
-                </a>
-            </div>
+          <div class="service-card">
+            <img
+              src="personalizados.jpeg"
+              alt="Serviço de Itens Personalizados"
+            />
+            <p class="service-label">PERSONALISADOS</p>
+          </div>
         </div>
-    </section>
+      </section>
+
+      <section id="find-here" class="find-here-section">
+        <h2 class="find-here-title">O que você encontra Aqui?</h2>
+        <p class="find-here-subtitle">
+          Conheça os itens que fazem parte da nossa loja
+        </p>
+        <div class="icon-grid">
+          <div class="icon-circle">
+            <img src="icones/religioso.png" alt="Ícone1" />
+          </div>
+          <div class="icon-circle">
+            <img src="icones/bombom.png" alt="Ícone2" />
+          </div>
+          <div class="icon-circle">
+            <img src="icones/box.png" alt="Ícone3" />
+          </div>
+          <div class="icon-circle">
+            <img src="icones/buquê.png" alt="Ícone4" />
+          </div>
+          <div class="icon-circle">
+            <img src="icones/cestas.png" alt="Ícone5" />
+          </div>
+          <div class="icon-circle">
+            <img src="icones/flores.png" alt="Ícone6" />
+          </div>
+          <div class="icon-circle">
+            <img src="icones/velas.png" alt="Ícone7" />
+          </div>
+          <div class="icon-circle">
+            <img src="icones/plantas.png" alt="Ícone de Spa" />
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews-contact-section">
+        <div class="container">
+          <div class="reviews-part">
+            <h2 class="section-title">O que nossos clientes dizem</h2>
+            <div class="reviews-container">
+              <div class="review-card">
+                <div class="review-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="review-text">
+                  "As flores são sempre frescas e os arranjos são maravilhosos!
+                  O atendimento é impecável. Recomendo de olhos fechados!"
+                </p>
+                <span class="review-author">- Maria S.</span>
+              </div>
+
+              <div class="review-card">
+                <div class="review-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="review-text">
+                  "Comprei um presente personalizado e foi um sucesso. Deu para
+                  ver o carinho em cada detalhe. Virei cliente fiel!"
+                </p>
+                <span class="review-author">- João P.</span>
+              </div>
+
+              <div class="review-card">
+                <div class="review-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="review-text">
+                  "A assinatura floral mudou o astral da minha casa. Toda semana
+                  uma surpresa linda e cheirosa. Eu amo!"
+                </p>
+                <span class="review-author">- Ana L.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-part">
+            <h2 class="section-title">Faça seu orçamento</h2>
+            <p class="contact-text">
+              Tem uma ideia para um evento, um presente especial ou quer uma
+              assinatura floral? Clique no botão abaixo e fale diretamente
+              conosco pelo WhatsApp!
+            </p>
+            <a
+              href="https://wa.me/558999749763"
+              target="_blank"
+              class="whatsapp-button"
+            >
+              <i class="fa-brands fa-whatsapp"></i> Chamar no WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer id="contact" class="footer-section">
-        <div class="footer-container">
-            <div class="footer-main">
-                
-                <div class="footer-column">
-                    <h4>Nossa Loja</h4>
-                    <p>Rua Monsenhor Hípolito, 545<br>Centro, Picos - PI<br>CEP 64600-104</p>
-                    <p>+55 (89) 98145-7330</p>
-                    
-                    <p>agroeflores20@gmail.com</p>
-                    
-                    <a href="mailto:agroeflores20@gmail.com" class="footer-btn btn-primary">
-                        <i class="fa-solid fa-envelope"></i> ENVIAR E-MAIL
-                    </a>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Horários de Funcionamento</h4>
-                    <p>Segunda a Sexta:<br> 08:00h – 18:00h</p>
-                    <p>Sábados:<br> 08:00h – 12:00h</p>
-                    <a href="#" target="_blank" class="footer-btn btn-outline">
-                        <i class="fa-brands fa-instagram"></i> NOS SIGA NO INSTAGRAM
-                    </a>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Nossa Localização</h4>
-    
-                    <a href="https://www.google.com.br/maps/place/Agro+%26+Flores+-+Picos+-+Plantas+-+Buqu%C3%AA+de+Noivas+-+Mesa+Posta/@-7.0850491,-41.4704514,19.62z/data=!4m6!3m5!1s0xa61365ba2bec03fb:0xc2dfdbe9147bc9e3!8m2!3d-7.0850664!4d-41.4703789!16s%2Fg%2F11rrp3w894?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
-                        <img src="mapa.png" alt="Mapa da localização da loja" class="map-placeholder">
-                 </a>
-                </div>
-                
-            </div>
-            
-            <div class="footer-bottom">
-                <div class="footer-logos">
-                    <img src="logo.png" alt="Logo ">
-                </div>
-                <div class="footer-subnav">
-                    <ul>
-                        <li><a href="#">Avisos Legais</a></li>
-                        <li><a href="#">Acessibilidade</a></li>
-                        <li><a href="#">Privacidade</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-copyright">
-                <p>©Copyright 2025 | Designed and Developed by Lumamaiara</p>
-            </div>
+      <div class="footer-container">
+        <div class="footer-main">
+          <div class="footer-column">
+            <h4>Nossa Loja</h4>
+            <p>
+              Rua Monsenhor Hípolito, 545<br />Centro, Picos - PI<br />CEP
+              64600-104
+            </p>
+            <p>+55 (89) 98145-7330</p>
+
+            <p>agroeflores20@gmail.com</p>
+
+            <a
+              href="mailto:agroeflores20@gmail.com"
+              class="footer-btn btn-primary"
+            >
+              <i class="fa-solid fa-envelope"></i> ENVIAR E-MAIL
+            </a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Horários de Funcionamento</h4>
+            <p>
+              Segunda a Sexta:<br />
+              08:00h – 18:00h
+            </p>
+            <p>
+              Sábados:<br />
+              08:00h – 12:00h
+            </p>
+            <a href="#" target="_blank" class="footer-btn btn-outline">
+              <i class="fa-brands fa-instagram"></i> NOS SIGA NO INSTAGRAM
+            </a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Nossa Localização</h4>
+            <div id="map-container"></div>
+          </div>
         </div>
+
+        <div class="footer-bottom">
+          <div class="footer-logos">
+            <img src="logo.png" alt="Logo " />
+          </div>
+          <div class="footer-subnav">
+            <ul>
+              <li><a href="#">Avisos Legais</a></li>
+              <li><a href="#">Acessibilidade</a></li>
+              <li><a href="#">Privacidade</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-copyright">
+          <p>©Copyright 2025 | Designed and Developed by Lumamaiara</p>
+        </div>
+      </div>
     </footer>
 
-</body>
-</html>
+    <a
+      href="https://wa.me/558999749763"
+      class="floating-whatsapp"
+      target="_blank"
+      title="Fale Conosco"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+      // Mapa
+      var map = L.map("map-container").setView([-7.07694, -41.4669], 16);
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      }).addTo(map);
+      L.marker([-7.07694, -41.4669])
+        .addTo(map)
+        .bindPopup("<b>Agro & Flores</b><br>R. Monsenhor Hípolito, 545")
+        .openPopup();
+
+      // Menu Hamburger (Se você tiver implementado)
+      if (document.querySelector(".hamburger-icon")) {
+        document
+          .querySelector(".hamburger-icon")
+          .addEventListener("click", function () {
+            document.querySelector(".nav-links").classList.toggle("nav-active");
+          });
+      }
+    </script>
+  </body>
+</html>

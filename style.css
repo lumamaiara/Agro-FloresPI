@@ -1,602 +1,638 @@
 /* ========= FONTES, VARIÁVEIS E ESTILOS GERAIS ========= */
-@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@400&family=Antic+Didone&family=Josefin+Sans:wght@400&family=Lovers+Quarrel&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anek+Latin:wght@400&family=Antic+Didone&family=Josefin+Sans:wght@400&family=Lovers+Quarrel&display=swap");
 
 :root {
-    --bege-fundo: #CCC3A2;
-    --verde-escuro: #1C321B;
-    --verde-claro: #74b676;
+  --bege-fundo: #ccc3a2;
+  --verde-escuro: #1c321b;
+  --verde-claro: #74b676;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: var(--bege-fundo);
-    font-family: 'Josefin Sans', sans-serif;
-    overflow-x: hidden;
+  background: var(--bege-fundo);
+  font-family: "Josefin Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-
 
 /* ========= SEÇÃO INICIAL (HERO) E NAVEGAÇÃO DA HOME ======== */
 .hero-section {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 128px;
-    background-image: url('home.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 128px;
+  background-image: url("home.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
 }
 
 .nav-bar {
-    position: absolute;
-    top: 108px;
-    width: 1270px;
-    max-width: 90%;
-    height: 50px;
-    background: #FFFFFF;
-    border-radius: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 3;
+  position: absolute;
+  top: 108px;
+  width: 1270px;
+  max-width: 90%;
+  height: 50px;
+  background: #ffffff;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    padding: 0 50px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 0 50px;
 }
 
 .nav-links a {
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    text-transform: uppercase;
-    color: #000000;
-    text-decoration: none;
-    transition: color 0.3s;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #888;
+  color: #888;
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    margin-top: 250px;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-top: 250px;
 }
 
 .hero-title {
-    font-family: 'Lovers Quarrel', cursive;
-    font-weight: 400;
-    font-size: 96px;
-    line-height: 108px;
-    color: var(--bege-fundo);
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 5px 5px rgba(0, 0, 0, 0.5);
+  font-family: "Lovers Quarrel", cursive;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 108px;
+  color: var(--bege-fundo);
+  text-shadow:
+    0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .hero-subtitle {
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 400;
-    font-size: 24px;
-    text-transform: uppercase;
-    color: var(--verde-claro);
-    padding: 5px 15px;
-    border-radius: 5px;
-    margin-top: 60px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: var(--verde-claro);
+  padding: 5px 15px;
+  border-radius: 5px;
+  margin-top: 60px;
 }
-
-
 
 /* SEÇÃO DE SERVIÇOS */
 .services-section {
-    padding: 60px 10px;
-    background-color: var(--bege-fundo);
+  padding: 60px 10px;
+  background-color: var(--bege-fundo);
 }
 
 .section-title {
-    font-family: 'Antic Didone', serif;
-    font-weight: 400;
-    font-size: 45px;
-    text-align: center;
-    text-transform: uppercase;
-    color: var(--verde-escuro);
-    margin-bottom: 40px;
+  font-family: "Antic Didone", serif;
+  font-weight: 400;
+  font-size: 45px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--verde-escuro);
+  margin-bottom: 40px;
 }
 
 .services-container {
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
 }
 
 .service-card {
-    width: 260px;
-    height: 504px;
-    border-radius: 35px;
-    position: relative;
-    overflow: hidden;
-    background: #D9D9D9;
+  width: 260px;
+  height: 504px;
+  border-radius: 35px;
+  position: relative;
+  overflow: hidden;
+  background: #d9d9d9;
 }
 
 .service-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
 }
 
 .service-card:hover img {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .service-label {
-    font-family: 'Anek Latin', sans-serif;
-    font-weight: 400;
-    font-size: 32px;
-    letter-spacing: 0.5px;
-    color: #FFFFFF;
-    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    text-align: center;
+  font-family: "Anek Latin", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
 }
-
 
 /* SEÇÃO "O QUE VOCÊ ENCONTRA AQUI?"  */
 .find-here-section {
-    padding: 100px 20px;
-    background: var(--verde-escuro);
-    border-radius: 355px 0px;
-    text-align: center;
-    color: #FFFFFF;
+  padding: 100px 20px;
+  background: var(--verde-escuro);
+  border-radius: 355px 0px;
+  text-align: center;
+  color: #ffffff;
 }
 
 .find-here-title {
-    font-family: 'Antic Didone', serif;
-    font-weight: 400;
-    font-size: 48px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
+  font-family: "Antic Didone", serif;
+  font-weight: 400;
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .find-here-subtitle {
-    font-family: 'Anek Latin', sans-serif;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 36px;
-    letter-spacing: 1px;
-    color: var(--bege-fundo);
-    max-width: 620px;
-    margin: 0 auto 80px auto;
+  font-family: "Anek Latin", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: 1px;
+  color: var(--bege-fundo);
+  max-width: 620px;
+  margin: 0 auto 80px auto;
 }
 
 .icon-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 190px);
-    gap: 90px 80px;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 190px);
+  gap: 90px 80px;
+  justify-content: center;
 }
 
 .icon-circle {
-    width: 210px;
-    height: 210px;
-    background: #D9D9D9;
-    border-radius: 50%;
+  width: 210px;
+  height: 210px;
+  background: #d9d9d9;
+  border-radius: 50%;
 }
 .icon-circle img {
-    width: 145px; /* Define a largura da imagem do ícone */
-    height: 190px; /* Define a altura da imagem do ícone */
-    object-fit: contain; /* Garante que a imagem caiba sem distorcer */
+  width: 145px; /* Define a largura da imagem do ícone */
+  height: 190px; /* Define a altura da imagem do ícone */
+  object-fit: contain; /* Garante que a imagem caiba sem distorcer */
 }
 @media (max-width: 768px) {
-    .icon-circle img {
-        width: 60px; /* Diminui o ícone em telas menores */
-        height: 60px;
-    }
+  .icon-circle img {
+    width: 60px; /* Diminui o ícone em telas menores */
+    height: 60px;
+  }
 }
 
 /*  SEÇÃO DE AVALIAÇÕES E CONTATO  */
 .reviews-contact-section {
-    background-color: var(--bege-fundo);
-    padding: 80px 20px;
-    color: var(--verde-escuro);
+  background-color: var(--bege-fundo);
+  padding: 80px 20px;
+  color: var(--verde-escuro);
 }
 
 /* Título da seção */
 .reviews-contact-section .section-title {
-    color: var(--verde-escuro);
+  color: var(--verde-escuro);
 }
 
 /* Container das Avaliações */
 .reviews-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-bottom: 80px; /* Espaço entre as avaliações e o botão de contato */
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 80px; /* Espaço entre as avaliações e o botão de contato */
 }
 
 .review-card {
-    background-color: #F7F3E8; /* Um bege um pouco mais claro */
-    border-radius: 20px;
-    padding: 30px;
-    width: 320px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    text-align: center;
+  background-color: #f7f3e8; /* Um bege um pouco mais claro */
+  border-radius: 20px;
+  padding: 30px;
+  width: 320px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
 }
 
 .review-stars {
-    color: #f39c12; /* Cor de estrela (dourado) */
-    font-size: 1.2rem;
-    margin-bottom: 15px;
+  color: #f39c12; /* Cor de estrela (dourado) */
+  font-size: 1.2rem;
+  margin-bottom: 15px;
 }
 
 .review-text {
-    font-family: 'Anek Latin', sans-serif;
-    font-size: 1rem;
-    line-height: 1.6;
-    font-style: italic;
-    margin-bottom: 15px;
+  font-family: "Anek Latin", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 15px;
 }
 
 .review-author {
-    font-weight: bold;
-    font-size: 1.1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 /* Parte do Contato (WhatsApp) */
 .contact-part {
-    text-align: center;
+  text-align: center;
 }
 
 .contact-text {
-    font-family: 'Anek Latin', sans-serif;
-    font-size: 1.2rem;
-    line-height: 1.7;
-    max-width: 600px;
-    margin: 0 auto 30px auto;
+  font-family: "Anek Latin", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
 }
 
 .whatsapp-button {
-    display: inline-block;
-    background-color: #25D366; /* Cor oficial do WhatsApp */
-    color: #FFFFFF;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 15px 35px;
-    border-radius: 50px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  background-color: #25d366; /* Cor oficial do WhatsApp */
+  color: #ffffff;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 15px 35px;
+  border-radius: 50px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .whatsapp-button i {
-    margin-right: 10px; /* Espaço entre o ícone e o texto */
-    font-size: 1.4rem;
+  margin-right: 10px; /* Espaço entre o ícone e o texto */
+  font-size: 1.4rem;
 }
 
 .whatsapp-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Ajuste de responsividade para os cards de avaliação */
 @media (max-width: 480px) {
-    .review-card {
-        width: 100%;
-    }
+  .review-card {
+    width: 100%;
+  }
 }
 
 /* RODAPÉ  */
 
 .footer-section {
-    background: var(--verde-escuro);
-    padding: 80px 20px;
-    color: var(--bege-fundo);
-    position: relative;
-    margin-top: -100px; 
-    z-index: -1; 
+  background: var(--verde-escuro);
+  padding: 80px 20px;
+  color: var(--bege-fundo);
+  position: relative;
+  margin-top: -100px;
+  z-index: -1;
 }
 
 .footer-container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .footer-main {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    flex-wrap: wrap;
-    padding-top: 50px; 
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding-top: 50px;
 }
 
 .footer-column {
-    flex: 1;
-    min-width: 250px; /* Para responsividade */
+  flex: 1;
+  min-width: 250px; /* Para responsividade */
 }
 
 .footer-column h4 {
-    font-family: 'Antic Didone', serif;
-    font-size: 1.5rem;
-    color: #FFFFFF;
-    margin-bottom: 20px;
+  font-family: "Antic Didone", serif;
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 20px;
 }
 
 .footer-column p {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 15px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
 }
 
 /* Estilo dos Botões */
 .footer-btn {
-    display: inline-block;
-    text-decoration: none;
-    padding: 19px 25px;
-    border-radius: 8px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-    margin-top: 10px;
-    transition: all 0.3s ease;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    border: 2px solid transparent;
+  display: inline-block;
+  text-decoration: none;
+  padding: 19px 25px;
+  border-radius: 8px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  border: 2px solid transparent;
 }
 
 .footer-btn i {
-    margin-right: 8px;
+  margin-right: 8px;
 }
 
 /* Botão Primário (Preenchido) */
 .btn-primary {
-    background: var(--bege-fundo);
-    color: var(--verde-escuro);
-    border-color: var(--bege-fundo);
+  background: var(--bege-fundo);
+  color: var(--verde-escuro);
+  border-color: var(--bege-fundo);
 }
 .btn-primary:hover {
-    background: #FFFFFF;
-    border-color: #FFFFFF;
+  background: #ffffff;
+  border-color: #ffffff;
 }
 
 /* Botão Secundário (Vazado) */
 .btn-outline {
-    background: transparent;
-    border-color: var(--bege-fundo);
-    color: var(--bege-fundo);
+  background: transparent;
+  border-color: var(--bege-fundo);
+  color: var(--bege-fundo);
 }
 .btn-outline:hover {
-    background: var(--bege-fundo);
-    color: var(--verde-escuro);
+  background: var(--bege-fundo);
+  color: var(--verde-escuro);
 }
 
 /* Imagem do Mapa */
 .map-placeholder {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    opacity: 0.8;
-    margin-top: -10px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  opacity: 0.8;
+  margin-top: -10px;
 }
 
 /* Parte de Baixo (Logos e Links) */
 .footer-bottom {
-    border-top: 1px solid rgba(204, 195, 162, 0.2);
-    margin-top: 10px;
-    padding-top: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
+  border-top: 1px solid rgba(204, 195, 162, 0.2);
+  margin-top: 10px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .footer-subnav ul {
-    list-style: none;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 0;
 }
 
 .footer-subnav a {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 0.8rem;
-    text-decoration: none;
-    color: var(--bege-fundo);
-    opacity: 0.7;
-    transition: opacity 0.3s;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: var(--bege-fundo);
+  opacity: 0.7;
+  transition: opacity 0.3s;
 }
 .footer-subnav a:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .footer-logos {
-    display: flex;
-    gap: 20px;
-    align-items: center;
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
 .footer-logos img {
-    height: 90px;
-    width: auto;
-    opacity: 0.7;
+  height: 90px;
+  width: auto;
+  opacity: 0.7;
 }
 
 /* Copyright */
 .footer-copyright {
-    text-align: center;
-    padding-top: 10px;
-    border-top: 1px solid rgba(204, 195, 162, 0.2);
-    margin-top: 10px;
+  text-align: center;
+  padding-top: 10px;
+  border-top: 1px solid rgba(204, 195, 162, 0.2);
+  margin-top: 10px;
 }
 
 .footer-copyright p {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 0.9rem;
-    opacity: 0.7;
-    color: var(--bege-fundo);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  color: var(--bege-fundo);
 }
 
 /* Responsividade Rodapé */
 @media (max-width: 768px) {
-    .footer-bottom {
-        flex-direction: column-reverse; /* Coloca os links abaixo dos logos */
-        align-items: center;
-    }
+  .footer-bottom {
+    flex-direction: column-reverse; /* Coloca os links abaixo dos logos */
+    align-items: center;
+  }
 
-    .footer-column {
-        text-align: center;
-    }
+  .footer-column {
+    text-align: center;
+  }
 }
-
 
 /* AJUSTES PARA TELAS MENORES (RESPONSIVIDADE) */
 @media (max-width: 1300px) {
-    .nav-bar {
-        width: 95%;
-    }
-    .icon-grid {
-        grid-template-columns: repeat(3, 200px);
-    }
+  .nav-bar {
+    width: 95%;
+  }
+  .icon-grid {
+    grid-template-columns: repeat(3, 200px);
+  }
 }
 
 @media (max-width: 992px) {
-    .icon-grid {
-        grid-template-columns: repeat(2, 200px);
-    }
-    .services-container {
-        gap: 60px;
-    }
+  .icon-grid {
+    grid-template-columns: repeat(2, 200px);
+  }
+  .services-container {
+    gap: 60px;
+  }
 }
 
 @media (max-width: 768px) {
-    .nav-links {
-        padding: 0 10px;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-    }
-    .nav-bar {
-        height: auto;
-        padding: 15px;
-    }
-    .hero-content {
-        margin-top: 150px;
-    }
-    .hero-title {
-        font-size: 72px;
-    }
-    .find-here-section {
-        border-radius: 150px 0;
-    }
-    .icon-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
-    }
-    .icon-circle {
-        width: 150px;
-        height: 150px;
-    }
-    .footer-section::after {
-        width: 250px;
-        height: 180px;
-    }
-    .footer-circle {
-        width: 70px;
-        height: 70px;
-    }
+  .nav-links {
+    padding: 0 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .nav-bar {
+    height: auto;
+    padding: 15px;
+  }
+  .hero-content {
+    margin-top: 150px;
+  }
+  .hero-title {
+    font-size: 72px;
+  }
+  .find-here-section {
+    border-radius: 150px 0;
+  }
+  .icon-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  .icon-circle {
+    width: 150px;
+    height: 150px;
+  }
+  .footer-section::after {
+    width: 250px;
+    height: 180px;
+  }
+  .footer-circle {
+    width: 70px;
+    height: 70px;
+  }
 }
 
 @media (max-width: 480px) {
-    .services-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .icon-grid {
-        grid-template-columns: 1fr;
-    }
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .icon-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* PÁGINA "EM CONSTRUÇÃO" ( somos.html)*/
 
 .simple-home-bar {
-    background-color: var(--verde-escuro);
-    padding: 15px 40px;
+  background-color: var(--verde-escuro);
+  padding: 15px 40px;
 }
 
 .simple-home-bar a {
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-    font-size: 1rem;
-    color: var(--bege-fundo);
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: opacity 0.3s ease;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--bege-fundo);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: opacity 0.3s ease;
 }
 
 .simple-home-bar a:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .simple-home-bar i {
-    margin-right: 8px; /* Ícone de seta */
+  margin-right: 8px; /* Ícone de seta */
 }
 
 .page-section-beige {
-    min-height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 80px 20px;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px;
 }
 
 .construction-content h2 {
-    font-family: 'Antic Didone', serif;
-    font-size: 3rem;
-    color: var(--verde-escuro);
+  font-family: "Antic Didone", serif;
+  font-size: 3rem;
+  color: var(--verde-escuro);
 }
 
 .construction-content p {
-    font-family: 'Anek Latin', sans-serif;
-    font-size: 1.2rem;
-    color: var(--verde-escuro);
+  font-family: "Anek Latin", sans-serif;
+  font-size: 1.2rem;
+  color: var(--verde-escuro);
+}
+
+/* ========= BOTÃO FLUTUANTE DO WHATSAPP ======== */
+.floating-whatsapp {
+  position: fixed; /* Fica fixo na tela mesmo ao rolar */
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366; /* Verde WhatsApp */
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 10000; /* Garante que fique acima de tudo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.1); /* Aumenta um pouco ao passar o mouse */
+  background-color: #128c7e; /* Verde um pouco mais escuro */
+}
+
+/* Responsividade: um pouco menor em celulares */
+@media (max-width: 768px) {
+  .floating-whatsapp {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    bottom: 15px;
+    right: 15px;
+  }
 }
