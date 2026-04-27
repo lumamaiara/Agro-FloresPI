@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finalizar Pedido | Agro & Flores</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@400;700&family=Antic+Didone&family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header class="simple-home-bar">
+      <a href="index.html">
+        <i class="fa-solid fa-arrow-left"></i> Voltar e Comprar Mais
+      </a>
+    </header>
+
+    <main
+      class="page-section-beige"
+      style="align-items: flex-start; padding-top: 40px"
+    >
+      <div class="checkout-card">
+        <div class="checkout-header">
+          <i
+            class="fa-solid fa-basket-shopping"
+            style="
+              font-size: 2rem;
+              color: var(--verde-escuro);
+              margin-bottom: 10px;
+            "
+          ></i>
+          <h2
+            style="
+              font-family: &quot;Antic Didone&quot;, serif;
+              color: var(--verde-escuro);
+            "
+          >
+            Resumo do Pedido
+          </h2>
+        </div>
+
+        <div id="lista-produtos" class="cart-list">
+          <p style="text-align: center; color: #888">
+            Carregando seu carrinho...
+          </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="checkout-section">
+          <label for="bairro-select"
+            ><i class="fa-solid fa-motorcycle"></i> 1. Opção de Entrega:</label
+          >
+          <select
+            id="bairro-select"
+            onchange="calcularTotal()"
+            class="custom-select"
+          >
+            <option value="0">Selecione uma opção...</option>
+
+            <option
+              value="Retirada na Loja"
+              style="font-weight: bold; color: var(--verde-escuro)"
+            >
+              🎁 Retirada na Loja (Grátis)
+            </option>
+          </select>
+        </div>
+
+        <div class="checkout-section">
+          <label for="pagamento-select"
+            ><i class="fa-regular fa-credit-card"></i> 2. Forma de
+            Pagamento:</label
+          >
+          <select id="pagamento-select" class="custom-select">
+            <option value="Pix">Pix (Transferência)</option>
+            <option value="Cartão de Crédito (Link)">
+              Cartão de Crédito (Link de Pagamento)
+            </option>
+            <option value="Cartão de Débito">
+              Cartão de Débito (Maquineta)
+            </option>
+            <option value="Dinheiro">Dinheiro / Espécie</option>
+          </select>
+        </div>
+
+        <div class="divider" style="margin-top: 10px"></div>
+
+        <div class="totals-area">
+          <div class="total-row">
+            <span>Subtotal:</span>
+            <span id="subtotal-display">R$ 0,00</span>
+          </div>
+          <div class="total-row">
+            <span>Taxa de Entrega:</span>
+            <span id="entrega-display">R$ 0,00</span>
+          </div>
+          <div class="total-row final">
+            <span>TOTAL:</span>
+            <span id="total-final-display">R$ 0,00</span>
+          </div>
+        </div>
+
+        <button
+          onclick="finalizarCompraWhatsApp()"
+          class="whatsapp-button"
+          style="
+            width: 100%;
+            margin-top: 25px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+          "
+        >
+          <i class="fa-brands fa-whatsapp"></i> Finalizar via WhatsApp
+        </button>
+
+        <button
+          onclick="limparCarrinho()"
+          style="
+            margin-top: 20px;
+            background: none;
+            border: none;
+            color: #888;
+            cursor: pointer;
+            text-decoration: underline;
+            font-size: 0.9rem;
+          "
+        >
+          Limpar Carrinho
+        </button>
+      </div>
+    </main>
+
+    <script>
+      // --- TAXAS DE ENTREGA ---
+      const taxasEntrega = {
+        Aerolândia: 7.0,
+        Altamira: 17.0,
+        "Alto da boa vista": 10.0,
+        "A. Araujo": 10.0,
+        "Aroeiras M.": 10.0,
+        "Baixio da Ipueiras": 10.0,
+        "Belo Norte": 10.0,
+        "Belo Sul": 8.0,
+        "Boa Sorte": 7.0,
+        "Boa Vista": 8.0,
+        Bomba: 7.0,
+        "Canto da várzea": 7.0,
+        Catavento: 8.0,
+        Centro: 6.0,
+        "Cidade de Deus": 8.0,
+        Cipauba: 17.0,
+        Cohab: 16.0,
+        Conduru: 15.0,
+        Cristovinho: 20.0,
+        Dner: 9.0,
+        Emaus: 7.0,
+        "Fátima do Piauí": 30.0,
+        "Gameleira G.": 17.0,
+        Ipueiras: 7.0,
+        "I. Depois do samu": 8.0,
+        "Jardim Belo H.": 12.0,
+        "Jardim Natal": 15.0,
+        "J. Das oliveiras": 17.0,
+        Junco: 10.0,
+        "L. Monteiro": 12.0,
+        "L. Sá Urtiga": 10.0,
+        "Lagoa Comprida": 17.0,
+        "Lagoa Grande": 20.0,
+        Macambira: 10.0,
+        "Malhada G.": 20.0,
+        "Morada do Sol": 8.0,
+        "Morada Nova": 10.0,
+        Morrinhos: 25.0,
+        "Morro da Areia": 12.0,
+        Pantanal: 17.0,
+        Paraibinha: 17.0,
+        Paroquial: 7.0,
+        "Passagem das Pedras": 7.0,
+        "Parque de Exposições": 12.0,
+        Pedrinhas: 12.0,
+        "Samambaia 1": 20.0,
+        "Samambaia .M": 25.0,
+        "São José": 7.0,
+        Saquinho: 15.0,
+        Sussuapara: 25.0,
+        Umari: 15.0,
+        Valparaíso: 35.0,
+      };
+
+      let carrinho =
+        JSON.parse(localStorage.getItem("carrinhoAgroFlores")) || [];
+      let subtotal = 0;
+
+      // Inicializa a página
+      function init() {
+        const selectBairro = document.getElementById("bairro-select");
+
+        // Popula os bairros em ordem alfabética APÓS a opção de Retirada
+        Object.keys(taxasEntrega)
+          .sort()
+          .forEach((bairro) => {
+            let opt = document.createElement("option");
+            opt.value = bairro;
+            opt.text = bairro;
+            selectBairro.appendChild(opt);
+          });
+
+        renderizarCarrinho();
+      }
+
+      function renderizarCarrinho() {
+        const listaDiv = document.getElementById("lista-produtos");
+        listaDiv.innerHTML = "";
+        subtotal = 0;
+
+        if (carrinho.length === 0) {
+          listaDiv.innerHTML =
+            "<p style='text-align:center; padding: 20px;'>Seu carrinho está vazio 😢</p>";
+        } else {
+          carrinho.forEach((item, index) => {
+            subtotal += item.preco;
+            listaDiv.innerHTML += `
+                        <div class="cart-item">
+                            <span>${item.nome}</span>
+                            <span><b>R$ ${item.preco.toFixed(2).replace(".", ",")}</b></span>
+                            <i class="fa-solid fa-trash-can" onclick="removerItem(${index})" style="color: #e74c3c; cursor: pointer; margin-left: 10px;"></i>
+                        </div>
+                    `;
+          });
+        }
+        calcularTotal();
+      }
+
+      function removerItem(index) {
+        carrinho.splice(index, 1);
+        localStorage.setItem("carrinhoAgroFlores", JSON.stringify(carrinho));
+        renderizarCarrinho();
+      }
+
+      function limparCarrinho() {
+        if (confirm("Deseja realmente esvaziar seu carrinho?")) {
+          localStorage.removeItem("carrinhoAgroFlores");
+          carrinho = [];
+          renderizarCarrinho();
+        }
+      }
+
+      // LÓGICA ATUALIZADA DO CÁLCULO
+      function calcularTotal() {
+        const bairro = document.getElementById("bairro-select").value;
+        let valorEntrega = 0;
+
+        // Verifica se é retirada ou bairro
+        if (bairro === "Retirada na Loja") {
+          valorEntrega = 0;
+        } else if (bairro !== "0") {
+          valorEntrega = taxasEntrega[bairro];
+        }
+
+        const totalFinal = subtotal + valorEntrega;
+
+        document.getElementById("subtotal-display").innerText =
+          subtotal.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+          });
+        document.getElementById("entrega-display").innerText =
+          valorEntrega === 0 && bairro === "Retirada na Loja"
+            ? "Grátis"
+            : valorEntrega.toLocaleString("pt-BR", {
+                style: "currency",
+                currency: "BRL",
+              });
+        document.getElementById("total-final-display").innerText =
+          totalFinal.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+          });
+      }
+
+      // LÓGICA ATUALIZADA DO WHATSAPP
+      function finalizarCompraWhatsApp() {
+        if (carrinho.length === 0) {
+          alert("Seu carrinho está vazio! Adicione produtos na loja primeiro.");
+          return;
+        }
+
+        const bairro = document.getElementById("bairro-select").value;
+        const pagamento = document.getElementById("pagamento-select").value;
+
+        if (bairro === "0") {
+          alert("Por favor, selecione a opção de entrega ou retirada.");
+          return;
+        }
+
+        // Montagem da mensagem profissional
+        let mensagem = `*NOVO PEDIDO - AGRO & FLORES* 🌸\n\n`;
+        mensagem += `*Itens do Pedido:*\n`;
+        carrinho.forEach((item) => {
+          mensagem += `• ${item.nome} (R$ ${item.preco.toFixed(2)})\n`;
+        });
+
+        let valorEntrega = 0;
+
+        if (bairro === "Retirada na Loja") {
+          mensagem += `\n🎁 *Entrega:* Retirada na Loja (Grátis)`;
+        } else {
+          valorEntrega = taxasEntrega[bairro];
+          mensagem += `\n🛵 *Entrega:* ${bairro} (Taxa: R$ ${valorEntrega.toFixed(2)})`;
+        }
+
+        const total = subtotal + valorEntrega;
+
+        mensagem += `\n💳 *Pagamento:* ${pagamento}`;
+        mensagem += `\n\n💰 *TOTAL DO PEDIDO: R$ ${total.toFixed(2)}*`;
+        mensagem += `\n\n_Por favor, confirme a disponibilidade do pedido._`;
+
+        const numeroWhatsApp = "558999749763";
+        const link = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+        window.open(link, "_blank");
+      }
+
+      // Inicia a execução
+      init();
+    </script>
+  </body>
+</html>

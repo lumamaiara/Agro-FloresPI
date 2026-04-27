@@ -3,17 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agro & Flores</title>
+    <title>Agro & Flores | Floricultura</title>
+
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
+
+    <meta
+      property="og:title"
+      content="Agro & Flores | Floricultura em Picos-PI"
+    />
+    <meta
+      property="og:description"
+      content="Buquês, Cestas e Assinatura Floral. Transformando momentos em memórias!"
+    />
+    <meta property="og:image" content="https://agroeflores.com.br/logo.jpg" />
+    <meta property="og:type" content="website" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@400&family=Antic+Didone&family=Josefin+Sans:wght@400&family=Lovers+Quarrel&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@400;700&family=Antic+Didone&family=Josefin+Sans:wght@400;700&family=Lovers+Quarrel&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="style.css" />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -22,6 +32,8 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     />
+
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
@@ -31,14 +43,16 @@
           <li><a href="#Home">HOME</a></li>
           <li><a href="#services">SERVIÇOS</a></li>
           <li><a href="somos.html">QUEM SOMOS</a></li>
+          <li><a href="#portfolio">LOJA</a></li>
+          <li><a href="#contact">FALE CONOSCO</a></li>
           <li>
             <a
-              href="https://drive.google.com/drive/folders/1pEJQwez-4A8vWgDA5HABCGWgTgkocyyC?usp=sharing"
-              target="_blank"
-              >CATÁLOGO</a
+              href="pedido.html"
+              style="color: var(--verde-claro); font-weight: bold"
             >
+              <i class="fa-solid fa-cart-shopping"></i> MEU PEDIDO
+            </a>
           </li>
-          <li><a href="#contact">FALE CONOSCO</a></li>
         </ul>
         <div class="hamburger-icon">
           <div class="bar"></div>
@@ -46,32 +60,258 @@
           <div class="bar"></div>
         </div>
       </nav>
+
       <div class="hero-content">
-        <h1 class="hero-title">Contando histórias Construindo memórias !</h1>
-        <p class="hero-subtitle">Agro&flores - 2025</p>
+        <h1 class="hero-title">Contando histórias Construindo memórias!</h1>
+        <p class="hero-subtitle">Agro & Flores</p>
       </div>
     </header>
 
     <main>
       <section id="services" class="services-section">
-        <h2 class="section-title">SERVIÇOS</h2>
+        <h2 class="section-title">Serviços</h2>
         <div class="services-container">
           <div class="service-card">
             <img src="Assinatura.jpeg" alt="Serviço de Assinatura Floral" />
             <p class="service-label">ASSINATURA</p>
           </div>
-
           <div class="service-card">
             <img src="decoracao.jpg" alt="Serviço de Decorações" />
             <p class="service-label">DECORAÇÕES</p>
           </div>
-
           <div class="service-card">
+            <img src="personalizados.jpeg" alt="Serviço Personalizado" />
+            <p class="service-label">PERSONALIZADOS</p>
+          </div>
+          <div class="service-card">
+            <img src="buque_noiva.jpg" alt="Buquês de Noivas" />
+            <p class="service-label">BUQUÊS DE NOIVAS</p>
+          </div>
+          <div class="service-card">
+            <img src="CESTA-CAFEMANHÃ2.jpg" alt="Cestas de Presente" />
+            <p class="service-label">CESTAS</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="portfolio-section">
+        <h2 class="section-title">Nossos Produtos</h2>
+
+        <div class="portfolio-filters">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="buques">Buquês</button>
+          <button class="filter-btn" data-filter="plantas">Plantas</button>
+          <button class="filter-btn" data-filter="religiosos">
+            Religiosos
+          </button>
+          <button class="filter-btn" data-filter="velas">Velas</button>
+          <button class="filter-btn" data-filter="noivas">Noivas</button>
+          <button class="filter-btn" data-filter="quadros">Quadros</button>
+          <button class="filter-btn" data-filter="assinatura">
+            Assinatura
+          </button>
+        </div>
+
+        <div class="portfolio-grid">
+          <div
+            class="portfolio-item"
+            data-category="buques"
+            onclick="openGallery(this)"
+            data-gallery="produtos/buque-especial-1.jpg, produtos/buque-especial-2.jpg"
+          >
             <img
-              src="personalizados.jpeg"
-              alt="Serviço de Itens Personalizados"
+              src="https://placehold.co/400x400/a3b18a/fff?text=Buquê+Especial"
+              alt="Buquê Especial de Rosas"
             />
-            <p class="service-label">PERSONALISADOS</p>
+            <div class="portfolio-overlay">
+              <h3>Buquê Especial</h3>
+              <p>R$ 150,00</p>
+            </div>
+            <button
+              class="btn-comprar"
+              onclick="adicionarAoCarrinho(event, 'Buquê Especial', 150.0)"
+            >
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+
+          <div
+            class="portfolio-item"
+            data-category="plantas"
+            onclick="openGallery(this)"
+          >
+            <img
+              src="https://placehold.co/400x400/2d6a4f/fff?text=Orquídea"
+              alt="Orquídea Premium"
+            />
+            <div class="portfolio-overlay">
+              <h3>Orquídea Premium</h3>
+              <p>R$ 120,00</p>
+            </div>
+            <button
+              class="btn-comprar"
+              onclick="adicionarAoCarrinho(event, 'Orquídea Premium', 120.0)"
+            >
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+
+          <div
+            class="portfolio-item"
+            data-category="religiosos"
+            onclick="openGallery(this)"
+          >
+            <img
+              src="https://placehold.co/400x400/bc6c25/fff?text=Imagem+Sacra"
+              alt="Imagem Sacra Decorada"
+            />
+            <div class="portfolio-overlay">
+              <h3>Imagem Sacra</h3>
+              <p>R$ 85,00</p>
+            </div>
+            <button
+              class="btn-comprar"
+              onclick="adicionarAoCarrinho(event, 'Imagem Sacra', 85.0)"
+            >
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+
+          <div
+            class="portfolio-item"
+            data-category="velas"
+            onclick="openGallery(this)"
+          >
+            <img
+              src="https://placehold.co/400x400/e9c46a/fff?text=Vela+Aromática"
+              alt="Vela Aromática Artesanal"
+            />
+            <div class="portfolio-overlay">
+              <h3>Vela Aromática</h3>
+              <p>R$ 45,00</p>
+            </div>
+            <button
+              class="btn-comprar"
+              onclick="adicionarAoCarrinho(event, 'Vela Aromática', 45.0)"
+            >
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+
+          <div
+            class="portfolio-item"
+            data-category="quadros"
+            onclick="openGallery(this)"
+          >
+            <img
+              src="https://placehold.co/400x400/d4a373/fff?text=Quadro+Afetivo"
+              alt="Quadro Personalizado"
+            />
+            <div class="portfolio-overlay">
+              <h3>Quadro Afetivo</h3>
+              <p>R$ 95,00</p>
+            </div>
+            <button
+              class="btn-comprar"
+              onclick="adicionarAoCarrinho(event, 'Quadro Afetivo', 95.0)"
+            >
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="catalogs-area">
+          <h3 class="catalogs-title">Nossos Catálogos em PDF</h3>
+          <div class="catalogs-grid">
+            <a
+              href="catalogos/catalogo-geral.pdf"
+              target="_blank"
+              class="catalog-card"
+            >
+              <div class="catalog-icon"><i class="fa-solid fa-store"></i></div>
+              <h4>Catálogo Geral</h4>
+            </a>
+            <a
+              href="catalogos/catalogo-noiva.pdf"
+              target="_blank"
+              class="catalog-card"
+            >
+              <div class="catalog-icon"><i class="fa-solid fa-ring"></i></div>
+              <h4>Noivas</h4>
+            </a>
+            <a
+              href="catalogos/catalogo-quadros.pdf"
+              target="_blank"
+              class="catalog-card"
+            >
+              <div class="catalog-icon"><i class="fa-solid fa-image"></i></div>
+              <h4>Quadros</h4>
+            </a>
+            <a
+              href="catalogos/catalogo-assinatura.pdf"
+              target="_blank"
+              class="catalog-card"
+            >
+              <div class="catalog-icon">
+                <i class="fa-solid fa-calendar-check"></i>
+              </div>
+              <h4>Assinatura</h4>
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="contact-part"
+          style="
+            margin-top: 60px;
+            background: var(--branco);
+            padding: 40px 20px;
+            border-radius: 20px;
+            box-shadow: var(--sombra-suave);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+          "
+        >
+          <h2 class="section-title" style="margin-bottom: 15px">
+            Pronto para Comprar?
+          </h2>
+          <p
+            class="contact-text"
+            style="
+              font-family: &quot;Anek Latin&quot;, sans-serif;
+              font-size: 1.1rem;
+              margin-bottom: 25px;
+              color: var(--verde-escuro);
+            "
+          >
+            Adicione os itens desejados clicando no ícone do carrinho e finalize
+            seu pedido com rapidez pelo WhatsApp!
+          </p>
+
+          <div
+            style="
+              display: flex;
+              gap: 15px;
+              justify-content: center;
+              flex-wrap: wrap;
+            "
+          >
+            <a
+              href="https://wa.me/558999749763"
+              target="_blank"
+              class="whatsapp-button"
+              style="
+                background-color: transparent;
+                border: 2px solid var(--verde-escuro);
+                color: var(--verde-escuro);
+              "
+            >
+              <i class="fa-brands fa-whatsapp"></i> Tirar Dúvidas
+            </a>
+            <a href="pedido.html" class="whatsapp-button">
+              <i class="fa-solid fa-cart-shopping"></i> Finalizar meu Pedido
+            </a>
           </div>
         </div>
       </section>
@@ -79,102 +319,68 @@
       <section id="find-here" class="find-here-section">
         <h2 class="find-here-title">O que você encontra Aqui?</h2>
         <p class="find-here-subtitle">
-          Conheça os itens que fazem parte da nossa loja
+          Tudo para tornar o seu dia inesquecível
         </p>
         <div class="icon-grid">
           <div class="icon-circle">
-            <img src="icones/religioso.png" alt="Ícone1" />
+            <img src="icones/religioso.png" alt="Religioso" />
           </div>
           <div class="icon-circle">
-            <img src="icones/bombom.png" alt="Ícone2" />
+            <img src="icones/bombom.png" alt="Bombom" />
+          </div>
+          <div class="icon-circle"><img src="icones/box.png" alt="Box" /></div>
+          <div class="icon-circle">
+            <img src="icones/buquê.png" alt="Buquê" />
           </div>
           <div class="icon-circle">
-            <img src="icones/box.png" alt="Ícone3" />
+            <img src="icones/cestas.png" alt="Cestas" />
           </div>
           <div class="icon-circle">
-            <img src="icones/buquê.png" alt="Ícone4" />
+            <img src="icones/flores.png" alt="Flores" />
           </div>
           <div class="icon-circle">
-            <img src="icones/cestas.png" alt="Ícone5" />
+            <img src="icones/velas.png" alt="Velas" />
           </div>
           <div class="icon-circle">
-            <img src="icones/flores.png" alt="Ícone6" />
-          </div>
-          <div class="icon-circle">
-            <img src="icones/velas.png" alt="Ícone7" />
-          </div>
-          <div class="icon-circle">
-            <img src="icones/plantas.png" alt="Ícone de Spa" />
+            <img src="icones/plantas.png" alt="Plantas" />
           </div>
         </div>
       </section>
 
       <section class="reviews-contact-section">
         <div class="container">
-          <div class="reviews-part">
-            <h2 class="section-title">O que nossos clientes dizem</h2>
+          <div class="reviews-part" style="text-align: center">
+            <h2 class="section-title">Nossos Clientes</h2>
             <div class="reviews-container">
               <div class="review-card">
                 <div class="review-stars">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
                 </div>
                 <p class="review-text">
                   "As flores são sempre frescas e os arranjos são maravilhosos!
-                  O atendimento é impecável. Recomendo de olhos fechados!"
+                  O atendimento é impecável."
                 </p>
                 <span class="review-author">- Maria S.</span>
               </div>
-
               <div class="review-card">
                 <div class="review-stars">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
                 </div>
                 <p class="review-text">
                   "Comprei um presente personalizado e foi um sucesso. Deu para
-                  ver o carinho em cada detalhe. Virei cliente fiel!"
+                  ver o carinho em cada detalhe."
                 </p>
                 <span class="review-author">- João P.</span>
               </div>
-
-              <div class="review-card">
-                <div class="review-stars">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
-                <p class="review-text">
-                  "A assinatura floral mudou o astral da minha casa. Toda semana
-                  uma surpresa linda e cheirosa. Eu amo!"
-                </p>
-                <span class="review-author">- Ana L.</span>
-              </div>
             </div>
-          </div>
-
-          <div class="contact-part">
-            <h2 class="section-title">Faça seu orçamento</h2>
-            <p class="contact-text">
-              Tem uma ideia para um evento, um presente especial ou quer uma
-              assinatura floral? Clique no botão abaixo e fale diretamente
-              conosco pelo WhatsApp!
-            </p>
-            <a
-              href="https://wa.me/558999749763"
-              target="_blank"
-              class="whatsapp-button"
-            >
-              <i class="fa-brands fa-whatsapp"></i> Chamar no WhatsApp
-            </a>
           </div>
         </div>
       </section>
@@ -186,57 +392,37 @@
           <div class="footer-column">
             <h4>Nossa Loja</h4>
             <p>
-              Rua Monsenhor Hípolito, 545<br />Centro, Picos - PI<br />CEP
+              Rua Monsenhor Hipólito, 545<br />Centro, Picos - PI<br />CEP
               64600-104
             </p>
             <p>+55 (89) 98145-7330</p>
-
-            <p>agroeflores20@gmail.com</p>
-
             <a
               href="mailto:agroeflores20@gmail.com"
               class="footer-btn btn-primary"
             >
-              <i class="fa-solid fa-envelope"></i> ENVIAR E-MAIL
+              <i class="fa-solid fa-envelope"></i> E-MAIL
             </a>
           </div>
-
           <div class="footer-column">
-            <h4>Horários de Funcionamento</h4>
-            <p>
-              Segunda a Sexta:<br />
-              08:00h – 18:00h
-            </p>
-            <p>
-              Sábados:<br />
-              08:00h – 12:00h
-            </p>
+            <h4>Horários</h4>
+            <p>Segunda a Sexta:<br />08:00h – 18:00h</p>
+            <p>Sábados:<br />08:00h – 12:00h</p>
             <a href="#" target="_blank" class="footer-btn btn-outline">
-              <i class="fa-brands fa-instagram"></i> NOS SIGA NO INSTAGRAM
+              <i class="fa-brands fa-instagram"></i> INSTAGRAM
             </a>
           </div>
-
           <div class="footer-column">
-            <h4>Nossa Localização</h4>
+            <h4>Localização</h4>
             <div id="map-container"></div>
           </div>
         </div>
-
         <div class="footer-bottom">
           <div class="footer-logos">
-            <img src="logo.png" alt="Logo " />
+            <img src="logo.png" alt="Logo Agro e Flores" />
           </div>
-          <div class="footer-subnav">
-            <ul>
-              <li><a href="#">Avisos Legais</a></li>
-              <li><a href="#">Acessibilidade</a></li>
-              <li><a href="#">Privacidade</a></li>
-            </ul>
+          <div class="footer-copyright">
+            <p>© 2025 | Agro & Flores. Desenvolvido por Lumamaiara</p>
           </div>
-        </div>
-
-        <div class="footer-copyright">
-          <p>©Copyright 2025 | Designed and Developed by Lumamaiara</p>
         </div>
       </div>
     </footer>
@@ -245,25 +431,53 @@
       href="https://wa.me/558999749763"
       class="floating-whatsapp"
       target="_blank"
-      title="Fale Conosco"
     >
       <i class="fa-brands fa-whatsapp"></i>
     </a>
 
+    <div id="imageModal" class="modal">
+      <span class="close-modal" onclick="closeModal()">&times;</span>
+      <a class="prev-btn" onclick="changeImage(-1)">&#10094;</a>
+      <a class="next-btn" onclick="changeImage(1)">&#10095;</a>
+      <img class="modal-content" id="img01" />
+      <div id="caption"></div>
+    </div>
+
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
-      // Mapa
-      var map = L.map("map-container").setView([-7.07694, -41.4669], 16);
-      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        attribution:
-          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-      }).addTo(map);
-      L.marker([-7.07694, -41.4669])
+      // 1. Carrinho de Compras
+      function adicionarAoCarrinho(event, nome, preco) {
+        event.stopPropagation();
+        let carrinho =
+          JSON.parse(localStorage.getItem("carrinhoAgroFlores")) || [];
+        carrinho.push({ nome: nome, preco: parseFloat(preco) });
+        localStorage.setItem("carrinhoAgroFlores", JSON.stringify(carrinho));
+        alert(
+          `"${nome}" adicionado ao seu pedido! 🛒\nClique em "Finalizar meu Pedido" para concluir.`,
+        );
+      }
+
+      // 2. Mapa Interativo
+      var map = L.map("map-container").setView([-7.0850664, -41.4703789], 17);
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(
+        map,
+      );
+
+      var popupContent = `
+            <div style="text-align: center;">
+                <b style="color: #1c321b; font-family: 'Josefin Sans'; font-size: 16px;">Agro & Flores</b><br>
+                R. Monsenhor Hipólito, 545<br>Centro, Picos - PI<br>
+                <a href="https://www.google.com/maps/search/?api=1&query=-7.0850664,-41.4703789" target="_blank" style="display: inline-block; margin-top: 8px; background: #74b676; color: white; padding: 5px 10px; border-radius: 5px; text-decoration: none; font-weight: bold;">
+                    Abrir no GPS
+                </a>
+            </div>
+        `;
+      L.marker([-7.0850664, -41.4703789])
         .addTo(map)
-        .bindPopup("<b>Agro & Flores</b><br>R. Monsenhor Hípolito, 545")
+        .bindPopup(popupContent)
         .openPopup();
 
-      // Menu Hamburger (Se você tiver implementado)
+      // 3. Menu Mobile
       if (document.querySelector(".hamburger-icon")) {
         document
           .querySelector(".hamburger-icon")
@@ -271,6 +485,77 @@
             document.querySelector(".nav-links").classList.toggle("nav-active");
           });
       }
+
+      // 4. Filtros
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const portfolioItems = document.querySelectorAll(".portfolio-item");
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          filterButtons.forEach((btn) => btn.classList.remove("active"));
+          button.classList.add("active");
+          const filterValue = button.getAttribute("data-filter");
+          portfolioItems.forEach((item) => {
+            if (
+              filterValue === "all" ||
+              item.getAttribute("data-category") === filterValue
+            ) {
+              item.classList.remove("hide");
+              item.classList.add("show");
+            } else {
+              item.classList.remove("show");
+              item.classList.add("hide");
+            }
+          });
+        });
+      });
+
+      // 5. Galeria Lightbox
+      var modal = document.getElementById("imageModal");
+      var modalImg = document.getElementById("img01");
+      var captionText = document.getElementById("caption");
+      var prevBtn = document.querySelector(".prev-btn");
+      var nextBtn = document.querySelector(".next-btn");
+      let currentImages = [];
+      let currentIndex = 0;
+
+      function openGallery(element) {
+        const galleryAttr = element.getAttribute("data-gallery");
+        const mainImageSrc = element.querySelector("img").src;
+        const title = element.querySelector("h3").innerText;
+
+        if (galleryAttr) {
+          currentImages = galleryAttr.split(",").map((item) => item.trim());
+        } else {
+          currentImages = [mainImageSrc];
+        }
+        currentIndex = 0;
+        updateModalImage();
+        modal.style.display = "block";
+        captionText.innerHTML = title;
+
+        if (currentImages.length > 1) {
+          prevBtn.style.display = "block";
+          nextBtn.style.display = "block";
+        } else {
+          prevBtn.style.display = "none";
+          nextBtn.style.display = "none";
+        }
+      }
+      function changeImage(n) {
+        currentIndex += n;
+        if (currentIndex >= currentImages.length) currentIndex = 0;
+        if (currentIndex < 0) currentIndex = currentImages.length - 1;
+        updateModalImage();
+      }
+      function updateModalImage() {
+        modalImg.src = currentImages[currentIndex];
+      }
+      function closeModal() {
+        modal.style.display = "none";
+      }
+      modal.addEventListener("click", function (e) {
+        if (e.target === modal) closeModal();
+      });
     </script>
   </body>
 </html>
